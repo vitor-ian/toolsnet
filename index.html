@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+    <!--CHARSET-->
+    <meta charset="UTF-8">
+
+    <!--VIEWPORT-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--NAME BAR-->
+    <title>NairoPC</title>
+
+    <!--ICON BAR-->
+    <link rel="shortcut icon" href="./assets/img/logo.png">
+
+    <!--IMPORT CSS-->
+    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
+
+    <!--IMPORT ICONS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+</head>
+
+<body>
+    <div id="menu-lat" class="d-flex flex-column flex-shrink-0 p-4 text-bg-dark menu-lat secundary-bg">
+        <a class="d-flex justify-content-center align-items-center my-4">
+            <img class="logo-menu" src="./assets/img/logo.png" alt="">
+            <p class="txt-logo-menu primary-txt-color ms-3">NairoPC</p>
+        </a>
+        
+        <div class="nav nav-pills flex-column mb-auto" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <button class="btn-menu-lat active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                <i class="bi bi-house-door-fill"></i>
+                <span class="txt-item-menu">Home</span>
+            </button>
+            <button class="btn-menu-lat" id="v-pills-dashboard-tab" data-bs-toggle="pill" data-bs-target="#v-pills-dashboard" type="button" role="tab" aria-controls="v-pills-dashboard" aria-selected="false">
+                <i class="bi bi-speedometer"></i>
+              <span class="txt-item-menu">Dashboard</span>
+            </button>
+            <button class="btn-menu-lat" id="v-pills-passwords-tab" data-bs-toggle="pill" data-bs-target="#v-pills-passwords" type="button" role="tab" aria-controls="v-pills-passwords" aria-selected="false">
+                <i class="bi bi-joystick"></i>
+              <span class="txt-item-menu">Accounts</span>
+            </button>
+            <button class="btn-menu-lat" id="v-pills-store-tab" data-bs-toggle="pill" data-bs-target="#v-pills-store" type="button" role="tab" aria-controls="v-pills-store" aria-selected="false">
+                <i class="bi bi-cart-fill"></i>
+              <span class="txt-item-menu">Store</span>
+            </button>
+        </div>
+        <button class="btn-menu-lat">
+            <i class="bi bi-door-open-fill"></i>
+          <span class="txt-item-menu">Log Out</span>
+        </button>
+        
+    </div>
+
+    <main class="primary-bg">
+        <header class="p-3 secundary-bg">
+            <div class="input-search primary-bg">
+                <input type="text" placeholder="Search Product">
+                <a href="#" class="secundary-color ms-2">
+                    <i class="bi bi-search"></i>
+                </a>
+                
+            </div>
+            
+            <div class="d-flex align-items-center btn-icons">
+                <a href="#" class="mx-2 secundary-color btn-icon">
+                    <i class="bi bi-cloud-arrow-down-fill"></i>
+                </a>
+                <div class="dropdown">
+                    <a href="#" class="d-flex align-items-center text-white text-decoration-none mx-2 secundary-color btn-icon" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-gear-fill"></i>
+                    </a>
+                    <ul style="min-width: 250px;" class="dropdown-menu dropdown-menu-end text-small shadow p-4">
+                      <li><b>Color Scheme</b></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li id="light" class="form-check">
+                        <input class="form-check-input" type="radio" name="theme" id="theme-light">
+                        <label class="form-check-label" for="theme-light">
+                            Light Mode
+                        </label>
+                      </li>
+                      <li id="dark" class="form-check mb-4">
+                        <input class="form-check-input" type="radio" name="theme" id="theme-dark" checked>
+                        <label class="form-check-label" for="theme-dark">
+                          Dark Mode
+                        </label>
+                      </li>
+
+                      <li><b>Leftside Bar</b></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li id="scroll" class="form-check">
+                        <input class="form-check-input" type="radio" name="menu-lateral" id="menu-scrollable" checked>
+                        <label class="form-check-label" for="menu-scrollable">
+                        Scrollable
+                        </label>
+                      </li>
+                      <li id="condensed" class="form-check mb-4">
+                        <input class="form-check-input" type="radio" name="menu-lateral" id="menu-condensed">
+                        <label class="form-check-label" for="menu-condensed">
+                          Condensed
+                        </label>
+                      </li>
+                      
+                      <button id="default-theme" class="btn-01 w-100">Reset to Default</button>
+                    </ul>
+                </div>
+                <div class="dropdown ms-2">
+                    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-profile" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                      <div>
+                          <span class="account-user-name primary-txt-color">Vítor Ian</span>
+                          <span class="account-position primary-txt-color">Founder</span>
+                      </div>
+                    </a>
+                    <ul class="dropdown-menu text-small shadow p-3">
+                      <li><a class="dropdown-item" href="https://vitor-ian.github.io/portfolio/" target="_blank"><i class="bi bi-briefcase-fill me-2"></i> Portfolio</a></li>
+                      <li><a class="dropdown-item" href="https://github.com/vitor-ian" target="_blank"><i class="bi bi-github me-2"></i> Github</a></li>
+                      <li><a class="dropdown-item" href="https://www.instagram.com/vitor_code" target="_blank"><i class="bi bi-instagram me-2"></i> Instagram</a></li>
+                      <li><a class="dropdown-item" href="https://www.linkedin.com/in/v%C3%ADtor-ian" target="_blank"><i class="bi bi-linkedin me-2"></i> Linkedin</a></li>
+                      <li><a class="dropdown-item" href="mailto:goncalvesvitorian@gmail.com" target="_blank"><i class="bi bi-envelope-fill me-2"></i> Email</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <section class="tab-content content-princ p-4" id="v-pills-tabContent">
+            <!-- Home -->
+            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
+                <h2>Home</h2>
+            </div>
+            <!-- Dashboard -->
+            <div class="tab-pane fade" id="v-pills-dashboard" role="tabpanel" aria-labelledby="v-pills-dashboard-tab" tabindex="0">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h2>Dashboard</h2>
+                    <button class="btn-01"><i class="bi bi-box-arrow-in-down me-1"></i> Download Report</button>
+                </div>
+
+                <section>
+                    <div class="dashboard-content-1">
+                        <div class="item-dash">item</div>
+                        <div class="item-dash">item</div>
+                        <div class="item-dash">item</div>
+                        <div class="item-dash">item</div>
+                        <div class="item-dash item-05">item</div>
+                        <div class="item-dash item-04">item</div>
+                        <div class="item-dash item-06">item</div>
+                        <div class="item-dash">item</div>
+                        <div class="item-dash">item</div>
+                        <div class="item-dash">item</div>
+                        <div class="item-dash">item</div>
+                    </div>
+                </section>
+            </div>
+            <!-- Accounts -->
+            <div class="tab-pane fade" id="v-pills-passwords" role="tabpanel" aria-labelledby="v-pills-passwords-tab" tabindex="0">
+                <h2>Accounts</h2>
+            </div>
+            <!-- Store -->
+            <div class="tab-pane fade" id="v-pills-store" role="tabpanel" aria-labelledby="v-pills-store-tab" tabindex="0">
+                <h2>Store</h2>
+            </div>
+        </section>
+    </main>
+    
+
+
+
+
+    <!--BOOTSTRAP-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+
+    <!--IMPORT JS-->
+    <script src="./assets/js/app.js"></script>
+    
+</body>
+
+</html>
