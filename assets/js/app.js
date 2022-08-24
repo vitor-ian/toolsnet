@@ -1,3 +1,7 @@
+const matematica = ['MMC','MDC','Números Romanos','Porcentagem','Regra de 3 Simples', 'Resto da Divisão','Contador de Dias','Área do Círculo','Área do Quadrado','Área do Retângulo','Área do Triângulo','Área do Pentágono','Área do Hexágono', 'Área do Polígono','Área do Losango','Área do Trapézio','Área do Paralelogramo','Área da Elípse','Área da Coroa Circular','Área do Setor Circular'];
+const geradores = ['Border Radius','Box Shadow','Animation','Nomes','Nicks','Senha Forte','Lorem Ipsum','Gerador Link WhatsApp'];
+const outros = ['Corretor Ortográfico','Ordem Alfabética','Contador de Caracteres','Letras Personalizadas','Converter Maiúscula e Minuscula','Copiar Emojs','Sorteador de Números','Roleta da Sorte'];
+
 function btnVer() {
     const btnVer = document.getElementById("ver-mais");
 
@@ -10,9 +14,10 @@ function btnVer() {
 
 function saveIdPage(){
     const idPage = localStorage.getItem("last_page");
-    let lastVisit =JSON.parse(localStorage.getItem('last_visit'));
+    let lastVisit = JSON.parse(localStorage.getItem('last_visit'));
     if(lastVisit == null){
-        lastVisit = ['mmc','mdc','reg3','tt','5','6','7','8'];
+        document.getElementById("tl-acessados-recente").innerHTML="Você pode gostar";
+        lastVisit = ['MMC','Copiar Emojs','Números Romanos','Senha Forte','Contador de Caracteres','Regra de 3 Simples','Animation','Roleta da Sorte'];
     }
     if(lastVisit.indexOf(idPage) < 0){
         if(idPage !== null){
@@ -27,9 +32,7 @@ function saveIdPage(){
 
 function acessadosRecente(){
     const itens =JSON.parse(localStorage.getItem('last_visit'));
-    const matematica = ['mmc','mdc'];
-    const geradores = ['tt','ss'];
-    const outros = ['reg3','cc'];
+    
     let categoria = "";
     let icon = "";
 
@@ -56,4 +59,16 @@ function acessadosRecente(){
             $("<a class='item-dash item-ac-rc' href='./" + categoria + "/" + value + ".html'>" + icon + "<span class='title-item'>" + value + "</span></a>").appendTo("#ac-rc-2");
         }
     });
+}
+
+function loadItens(){
+   // const idPage = localStorage.getItem("last_page");
+
+   // if(lastVisit.indexOf(idPage) < 0){
+   //     if(idPage !== null){
+   //         lastVisit.unshift(idPage);
+   //         lastVisit.pop();
+   //     }
+   //     localStorage.setItem('last_visit', JSON.stringify(lastVisit));
+   // }
 }

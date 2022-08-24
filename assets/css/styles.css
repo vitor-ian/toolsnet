@@ -62,6 +62,10 @@ textarea {
     --negative-color: #F7351B;
 }
 
+h1 {
+    font-size: 2rem !important;
+}
+
 h2{
     font-size: 1.5rem !important;
     font-weight: 500 !important;
@@ -305,8 +309,9 @@ input[type="radio"]:checked{
 .destaques{
     display: grid;
     gap: 15px;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 200px 200px;
+    padding-right: 1rem;
 }
 
 .categorias{
@@ -324,8 +329,8 @@ input[type="radio"]:checked{
     border-radius: 10px;
     padding: 20px;
     color: white;
-    -webkit-box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.043);
-    box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.043);
+    -webkit-box-shadow: 8px 8px 25px 0px rgba(0,0,0,0.1);
+    box-shadow: 8px 8px 17px -13px rgba(0,0,0,0.1);
     transition: .6s ease;
 }
 
@@ -399,12 +404,13 @@ footer{
     padding: 10px;
     color: rgb(170, 170, 170);
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
 }
 
 footer a{
-    color: white;
+    color: rgb(170, 170, 170);
+    font-weight: 900;
     transition: .6s ease;
 }
 
@@ -483,8 +489,9 @@ header img{
     }
 
     .acessados-recente{
-        grid-template-columns: auto auto;
-        grid-template-rows: 180px 180px;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 200px 200px;
+        padding-right: 1rem;
     }
 
     body{
@@ -499,6 +506,15 @@ header img{
     .categorias{
         grid-template-columns: auto auto;
     }
+
+    h1 {
+        font-size: 1.5rem !important;
+    }
+
+    .title-item {
+        font-size: 1rem;
+    }
+    
 }
 
 /* Tablet */
@@ -519,6 +535,12 @@ header img{
     header{
         display: none;
     }
+
+    .acessados-recente{
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 200px 200px;
+        padding-right: 1rem;
+    }
 }
 
 /* Descktop */
@@ -538,5 +560,11 @@ header img{
 
     header{
         display: none;
+    }
+
+    .acessados-recente{
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 200px;
+        padding-right: 3rem;
     }
 }
