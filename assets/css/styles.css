@@ -142,6 +142,7 @@ a.secundary-color:hover{
     font-size: 14px;
     transition: .6s ease;
     outline: 5px solid #036bcd00;
+    margin-left: 1rem;
 }
 
 .btn-01:hover{
@@ -336,15 +337,19 @@ input[type="radio"]:checked{
 
 .icon-mat{
     background-color: var(--primary-color);
-    outline-color: #036bcd25 !important;
+    
+    -webkit-box-shadow: 0px 0px 0px 13px #036bcd25; 
+    box-shadow: 0px 0px 0px 13px #036bcd25;
 }
 .icon-ger{
     background-color: #3B9D68;
-    outline-color: #0acd0325 !important;
+    -webkit-box-shadow: 0px 0px 0px 13px #0acd0325; 
+    box-shadow: 0px 0px 0px 13px #0acd0325;
 }
 .icon-out{
     background-color: #c49618;
-    outline-color: #cda80325 !important;
+    -webkit-box-shadow: 0px 0px 0px 13px #cda80325; 
+    box-shadow: 0px 0px 0px 13px #cda80325;
 }
 
 .item-dash:hover{
@@ -369,7 +374,7 @@ input[type="radio"]:checked{
     height: 50px;
     border-radius: 25px;
     font-size: 25px;
-    outline: 8px solid;
+    /*outline: 8px solid;*/
     transition: .6s ease;
 }
 
@@ -493,6 +498,11 @@ header img{
         grid-template-rows: 200px 200px;
         padding-right: 1rem;
     }
+    .categorias{
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 200px 200px;
+        padding-right: 1rem;
+    }
 
     body{
         display: block;
@@ -503,16 +513,16 @@ header img{
         border-bottom: 5px solid var(--primary-bg);
     }
 
-    .categorias{
-        grid-template-columns: auto auto;
-    }
-
     h1 {
         font-size: 1.5rem !important;
     }
 
     .title-item {
         font-size: 1rem;
+    }
+
+    .content-princ{
+        padding: 1.5rem;
     }
     
 }
@@ -541,6 +551,15 @@ header img{
         grid-template-rows: 200px 200px;
         padding-right: 1rem;
     }
+    .categorias{
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 200px 200px;
+        padding-right: 1rem;
+    }
+
+    .content-princ{
+        padding: 2rem;
+    }
 }
 
 /* Descktop */
@@ -566,5 +585,15 @@ header img{
         grid-template-columns: 25% 25% 25% 25%;
         grid-template-rows: 200px;
         padding-right: 3rem;
+    }
+
+    .categorias {
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 200px;
+        padding-right: 3rem;
+    }
+
+    .content-princ{
+        padding: 3rem;
     }
 }
