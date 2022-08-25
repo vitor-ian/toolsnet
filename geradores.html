@@ -27,7 +27,7 @@
     
 </head>
 
-<body onload="saveIdPage()">
+<body onload="saveIdPage(), loadItens('geradores', geradores)">
     <div id="menu-lat" class="flex-column flex-shrink-0 p-4 text-bg-dark menu-lat secundary-bg">
         <a class="d-flex justify-content-center align-items-center my-4" href="./index.html">
             <img class="logo-menu" src="./assets/img/logo.png" alt="">
@@ -69,56 +69,7 @@
         <h2>Geradores</h2>
         <div class="mb-5">
             <div class="w-100 mt-3">
-                <div class="categorias">
-                    <a class="item-dash item-ac-rc" href="">
-                        <div class="icon-item icon-mat mb-4">
-                            <i class="bi bi-calculator-fill"></i>
-                        </div>
-                        <span class="title-item">Lorem Ipsum</span>
-                    </a>
-                    <a class="item-dash item-ac-rc" href="">
-                        <div class="icon-item icon-mat mb-4">
-                            <i class="bi bi-calculator-fill"></i>
-                        </div>
-                        <span class="title-item">Lorem Ipsum</span>
-                    </a>
-                    <a class="item-dash item-ac-rc" href="">
-                        <div class="icon-item icon-mat mb-4">
-                            <i class="bi bi-calculator-fill"></i>
-                        </div>
-                        <span class="title-item">Lorem Ipsum</span>
-                    </a>
-                    <a class="item-dash item-ac-rc" href="">
-                        <div class="icon-item icon-mat mb-4">
-                            <i class="bi bi-calculator-fill"></i>
-                        </div>
-                        <span class="title-item">Lorem Ipsum</span>
-                    </a>
-                    <a class="item-dash item-ac-rc" href="">
-                        <div class="icon-item icon-mat mb-4">
-                            <i class="bi bi-calculator-fill"></i>
-                        </div>
-                        <span class="title-item">Lorem Ipsum</span>
-                    </a>
-                    <a class="item-dash item-ac-rc" href="">
-                        <div class="icon-item icon-mat mb-4">
-                            <i class="bi bi-calculator-fill"></i>
-                        </div>
-                        <span class="title-item">Lorem Ipsum</span>
-                    </a>
-                    <a class="item-dash item-ac-rc" href="">
-                        <div class="icon-item icon-mat mb-4">
-                            <i class="bi bi-calculator-fill"></i>
-                        </div>
-                        <span class="title-item">Lorem Ipsum</span>
-                    </a>
-                    <a class="item-dash item-ac-rc" href="">
-                        <div class="icon-item icon-mat mb-4">
-                            <i class="bi bi-calculator-fill"></i>
-                        </div>
-                        <span class="title-item">Lorem Ipsum</span>
-                    </a>
-                </div>
+                <div id="itens-cat" class="categorias"></div>
              </div>
         </div>
     </main>

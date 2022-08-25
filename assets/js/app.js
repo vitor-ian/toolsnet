@@ -12,26 +12,27 @@ function btnVer() {
     }
 };
 
-function saveIdPage(){
-    const idPage = localStorage.getItem("last_page");
+function saveIdPage(idPage){
     let lastVisit = JSON.parse(localStorage.getItem('last_visit'));
+    
     if(lastVisit == null){
         document.getElementById("tl-acessados-recente").innerHTML="Você pode gostar";
         lastVisit = ['MMC','Copiar Emojs','Números Romanos','Senha Forte','Contador de Caracteres','Regra de 3 Simples','Animation','Roleta da Sorte'];
-    }
-    if(lastVisit.indexOf(idPage) < 0){
-        if(idPage !== null){
-            lastVisit.unshift(idPage);
-            lastVisit.pop();
-        }
+
         localStorage.setItem('last_visit', JSON.stringify(lastVisit));
     }
-
-    acessadosRecente();
+    if(lastVisit.indexOf(idPage) < 0 && idPage !== undefined){
+        lastVisit.unshift(idPage);
+        lastVisit.pop();
+        localStorage.setItem('last_visit', JSON.stringify(lastVisit));
+    }
 }
 
 function acessadosRecente(){
     const itens =JSON.parse(localStorage.getItem('last_visit'));
+    if(itens == null || itens == undefined){
+        saveIdPage();
+    }
     
     let categoria = "";
     let icon = "";
@@ -61,14 +62,25 @@ function acessadosRecente(){
     });
 }
 
-function loadItens(){
-   // const idPage = localStorage.getItem("last_page");
+function loadItens(categoria, itens){
+    let icon = "";
 
-   // if(lastVisit.indexOf(idPage) < 0){
-   //     if(idPage !== null){
-   //         lastVisit.unshift(idPage);
-   //         lastVisit.pop();
-   //     }
-   //     localStorage.setItem('last_visit', JSON.stringify(lastVisit));
-   // }
+    switch(categoria){
+        case "matematica":
+            icon = "<div class='icon-item icon-mat mb-4'><i class='bi bi-calculator-fill'></i></div>";
+            break;
+        case "geradores":
+            icon = "<div class='icon-item icon-ger mb-4'><i class='bi bi-hammer'></i></div>";
+            break;
+        case "outros":
+            icon = "<div class='icon-item icon-out mb-4'><i class='bi bi-grid-fill'></i></div>";
+            break;
+        default:
+            icon = "<div class='icon-item icon-out mb-4'><i class='bi bi-question-octagon-fill'></i></div>";
+    }
+    
+    $(itens).each(function(index, value){
+        $("<a class='item-dash item-ac-rc' href='./" + categoria + "/" + value + ".html'>" + icon + "<span class='title-item'>" + value + "</span></a>").appendTo("#itens-cat");
+    });
 }
+
